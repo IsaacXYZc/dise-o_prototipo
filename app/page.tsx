@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, FileText, RefreshCw, Code } from "lucide-react"
+import { ArrowRight, FileText, RefreshCw, Code, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
@@ -23,8 +23,8 @@ export default function Home() {
                   Comenzar <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/docs">
-                <Button variant="outline">Documentación</Button>
+              <Link href="https://pandoc.org/try/">
+                <Button variant="outline">Probar online<ExternalLink className="ml-2 h-4 w-4" /> </Button>
               </Link>
             </div>
           </div>

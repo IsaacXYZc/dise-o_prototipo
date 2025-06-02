@@ -95,7 +95,7 @@ export default function Header() {
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
             <Input type="search" placeholder="Buscar..." className="w-[200px] pl-8 md:w-[200px] lg:w-[300px]" />
           </div>
-          <ModeToggle />
+          {/* <ModeToggle /> */}
           <Button variant="outline" size="icon" onClick={() => window.open("https://github.com/jgm/pandoc")}>
             <Github className="h-4 w-4" />
             <span className="sr-only">GitHub</span>
