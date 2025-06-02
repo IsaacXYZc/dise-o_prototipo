@@ -264,7 +264,7 @@ export default function DemoPage() {
               </p>
               <Link href="/try" target="_self" rel="noopener noreferrer">
                 <Button className="w-full">
-                  {/* Probar online <ExternalLink className="ml-2 h-4 w-4" /> */}
+                  Probar online {/* <ExternalLink className="ml-2 h-4 w-4" /> */}
                 </Button>
               </Link>
             </div>
