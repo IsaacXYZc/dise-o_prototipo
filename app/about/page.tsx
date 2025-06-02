@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="container max-w-4xl py-12">
+    <div className="container max-w-6xl py-12">
       <div className="space-y-8">
         <div>
           <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">Acerca de Pandoc</h1>

@@ -50,22 +50,26 @@ export default function Header() {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Documentación</NavigationMenuTrigger>
+                  <NavigationMenuTrigger><Link href="/docs" className="no-underline">
+                    Documentación
+                  </Link>
+                    </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {[
-                        { title: "Primeros pasos", href: "/docs/getting-started" },
+                        { title: "Primeros pasos", href: "/docs" },
+                        { title: "Instalación", href: "/docs/installation" },
                         { title: "Guía de usuario", href: "/docs/users-guide" },
-                        { title: "Guía de usuario (PDF)", href: "/docs/users-guide-pdf" },
-                        { title: "Contribuir", href: "/docs/contributing" },
-                        { title: "FAQ", href: "/docs/faq" },
-                        { title: "Filtros", href: "/docs/filters" },
-                        { title: "Filtros Lua", href: "/docs/lua-filters" },
-                        { title: "Lectores personalizados", href: "/docs/custom-readers" },
-                        { title: "Escritores personalizados", href: "/docs/custom-writers" },
-                        { title: "Creando un ebook", href: "/docs/making-ebook" },
-                        { title: "Soporte para Emacs Org mode", href: "/docs/org-mode" },
-                        { title: "Soporte para JATS", href: "/docs/jats" },
+                        { title: "Formatos soportados", href: "/docs/formats" },
+                        // { title: "Contribuir", href: "/docs/contributing" },
+                        // { title: "FAQ", href: "/docs/faq" },
+                        // { title: "Filtros", href: "/docs/filters" },
+                        // { title: "Filtros Lua", href: "/docs/lua-filters" },
+                        // { title: "Lectores personalizados", href: "/docs/custom-readers" },
+                        // { title: "Escritores personalizados", href: "/docs/custom-writers" },
+                        // { title: "Creando un ebook", href: "/docs/making-ebook" },
+                        // { title: "Soporte para Emacs Org mode", href: "/docs/org-mode" },
+                        // { title: "Soporte para JATS", href: "/docs/jats" },
                       ].map((item) => (
                         <li key={item.href}>
                           <NavigationMenuLink asChild>

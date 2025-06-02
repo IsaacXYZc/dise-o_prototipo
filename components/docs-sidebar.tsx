@@ -51,22 +51,31 @@ export function DocsSidebar() {
   const pathname = usePathname()
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-slate-900 dark:bg-slate-900 text-slate-300 p-4 rounded-lg">
       {sidebarItems.map((section, index) => (
-        <div key={index} className="pb-8">
-          <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-medium">{section.title}</h4>
-          <div className="grid grid-flow-row auto-rows-max text-sm">
-            {section.items.map((item, itemIndex) => (
-              <Link
-                key={itemIndex}
-                href={item.href}
-                className={cn("flex w-full items-center rounded-md px-2 py-2 hover:underline", {
-                  "bg-muted font-medium": pathname === item.href,
-                })}
-              >
-                {item.title}
-              </Link>
-            ))}
+        <div key={index} className="pb-6 last:pb-0">
+          <h4 className="mb-3 text-sm font-semibold text-slate-100 uppercase tracking-wider">{section.title}</h4>
+          <div className="space-y-1">
+            {section.items.map((item, itemIndex) => {
+              const isActive = pathname === item.href
+              return (
+                <Link
+                  key={itemIndex}
+                  href={item.href}
+                  className={cn(
+                    "relative flex items-center py-2 px-3 text-sm rounded-md transition-colors duration-200",
+                    "hover:text-slate-100 hover:bg-slate-800",
+                    {
+                      "text-cyan-400 bg-slate-800 font-medium": isActive,
+                      "text-slate-400": !isActive,
+                    },
+                  )}
+                >
+                  {isActive && <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-cyan-400 rounded-full" />}
+                  <span className={cn("ml-2", { "ml-3": isActive })}>{item.title}</span>
+                </Link>
+              )
+            })}
           </div>
         </div>
       ))}
