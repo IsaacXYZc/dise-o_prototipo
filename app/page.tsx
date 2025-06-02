@@ -25,10 +25,10 @@ export default function Home() {
                   Comenzar <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="https://pandoc.org/try/">
+              <Link href="/try">
                 <Button variant="outline">
                   Probar online
-                  <ExternalLink className="ml-2 h-4 w-4" />{" "}
+                  {/* <ExternalLink className="ml-2 h-4 w-4" />{" "} */}
                 </Button>
               </Link>
             </div>
